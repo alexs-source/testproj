@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using testproj.Utils;
 
 namespace testproj
 {
@@ -25,6 +26,7 @@ namespace testproj
         {
             services.AddControllersWithViews();
             services.AddMvc();
+            services.AddSingleton<ISingleton>(new Repository());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +54,14 @@ namespace testproj
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                //endpoints.MapControllerRoute(
+                //    name: "storage",
+                //    pattern: "{controller}/{action}",
+                //    defaults: new { controller = "Storage", action = "Storage"});
+                //endpoints.MapControllerRoute(
+                //    name: "storages",
+                //    pattern: "{controller}/{action}",
+                //    defaults: new { controller = "Storage", action = "Storages" });
             });
         }
     }
