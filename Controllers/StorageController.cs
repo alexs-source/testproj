@@ -23,7 +23,7 @@ namespace testproj.Controllers
         public IActionResult Storages()
         {
             var storages = repo.GetStorages();
-            ViewBag.Storages = storages.Select(s => s.Name);
+            ViewBag.StorageNames = storages.Select(s => s.Name);
             return View();
         }
     }

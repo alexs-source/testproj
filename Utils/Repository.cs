@@ -8,9 +8,9 @@ namespace testproj.Utils
 {
     public class Repository : ISingleton
     {
-        public List<Storage> GetStorages()
+        public Storage[] GetStorages()
         {
-            return new List<Storage>()
+            return new Storage[]
             {
                 new Storage() {Id = Guid.NewGuid(), Name = "First Storage", Items = new List<Item>()
                     {
@@ -25,6 +25,32 @@ namespace testproj.Utils
                         new Item() {Id = Guid.NewGuid(), Name = "Salt", Amount = 50, Units=UnitsEnum.g},
 
                     }
+                },
+            };
+        }
+
+
+        public LastVisited[] GetLastVisited()
+        {
+            return new LastVisited[]
+            {
+                new LastVisited()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "First Storage",
+                    LastVisitedDateTime = DateTime.Now
+                },
+                new LastVisited()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Second Storage",
+                    LastVisitedDateTime = DateTime.Now
+                },                
+                new LastVisited()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Shopping List",
+                    LastVisitedDateTime = DateTime.Now
                 },
             };
         }

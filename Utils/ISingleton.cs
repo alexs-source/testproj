@@ -5,6 +5,8 @@ namespace testproj.Utils
 {
     public interface ISingleton
     {
-        public List<Storage> GetStorages();
+        public Storage[] GetStorages();
+
+        public LastVisited[] GetLastVisited();
     }
 }

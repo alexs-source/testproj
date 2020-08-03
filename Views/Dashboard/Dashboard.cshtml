@@ -1,0 +1,13 @@
+﻿<div class="card">
+    <div class="card-header">
+        Last Visited
+    </div>
+    <div class="card-body">
+        <ul>
+            @foreach (var lastVisitedItem in ViewBag.LastVisited)
+            {
+            <li><div>@lastVisitedItem.Name</div><div>@lastVisitedItem.LastVisitedDateTime</div></li>
+            }
+        </ul>
+    </div>
+</div>

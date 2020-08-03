@@ -1,4 +1,11 @@
-﻿@foreach(var storageName in ViewBag.StorageNames)
-{
-    <div>@storageName</div>
-}
+﻿<table class="table table-bordered" style="width:100%">
+
+    @foreach (var storageName in ViewBag.StorageNames)
+    {
+        <tr>
+            <th>@storageName</th>
+            @*<th>Lastname</th>*@
+            @*<th>Age</th>*@
+        </tr>
+    }
+</table>
