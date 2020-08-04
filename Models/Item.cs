@@ -11,10 +11,13 @@ namespace testproj.Models
     }
     public class Item
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
+        public int StorageId { get; set; }
+        public int RecipeId { get; set; }
         public string Name { get; set; }
         public int Amount { get; set; }
 
+        public string Type { get; } = "item";
         public UnitsEnum Units { get; set; }
     }
 }

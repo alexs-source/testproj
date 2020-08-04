@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 
 namespace testproj.Models
 {
-    public class Storage
+    public class Recipe
     {
         public int Id { get; set; }
         public int UserId { get; set; }
-        public string Type { get; } = "storage";
-        public string Name { get; set; }
+        public string Type { get; } = "recipe";
 
-        public List<Item> Items { get; set; }
+        public string Title { get; set; }
+        public string SubTitle { get; set; }
+        public string Description { get; set; }
     }
 }

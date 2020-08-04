@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace testproj.Utils
 {
-    public class LastVisited
+    public class LastModified
     {
         public string Title { get; set; }
         public DateTime LastVisitedDateTime { get; set; }

@@ -12,17 +12,17 @@ namespace testproj.Utils
         {
             return new Storage[]
             {
-                new Storage() {Id = Guid.NewGuid(), Name = "First Storage", Items = new List<Item>()
+                new Storage() {Id = 1, Name = "First Storage", Items = new List<Item>()
                     {
-                        new Item() {Id = Guid.NewGuid(), Name = "Sugar", Amount = 1, Units=UnitsEnum.kg},
-                        new Item() {Id = Guid.NewGuid(), Name = "Milk", Amount = 1, Units=UnitsEnum.l},
+                        new Item() {Id = 1, Name = "Sugar", Amount = 1, Units=UnitsEnum.kg},
+                        new Item() {Id = 2, Name = "Milk", Amount = 1, Units=UnitsEnum.l},
 
                     }
                 },
-                new Storage() {Id = Guid.NewGuid(), Name = "Second Storage", Items = new List<Item>()
+                new Storage() {Id = 1, Name = "Second Storage", Items = new List<Item>()
                     {
-                        new Item() {Id = Guid.NewGuid(), Name = "Apples", Amount = 10, Units=UnitsEnum.piece},
-                        new Item() {Id = Guid.NewGuid(), Name = "Salt", Amount = 50, Units=UnitsEnum.g},
+                        new Item() {Id = 3, Name = "Apples", Amount = 10, Units=UnitsEnum.piece},
+                        new Item() {Id = 3, Name = "Salt", Amount = 50, Units=UnitsEnum.g},
 
                     }
                 },
