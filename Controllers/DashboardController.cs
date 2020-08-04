@@ -16,15 +16,15 @@ namespace testproj.Controllers
         }
         public IActionResult Dashboard()
         {
-            ViewBag.LastVisited = GetLastVisited();
+            //ViewBag.LastVisited = GetLastVisited();
             return View();
         }
 
-        private LastVisited[] GetLastVisited()
-        {
-            var lastVisited = repo.GetLastVisited();
+        //private LastVisited[] GetLastVisited()
+        //{
+        //    var lastVisited = repo.GetLastVisited();
 
-            return lastVisited;
-        }
+        //    return lastVisited;
+        //}
     }
 }

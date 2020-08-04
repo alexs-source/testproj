@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace testproj.Models
 {
     public class Recipe
     {
-        public int Id { get; set; }
-        public int UserId { get; set; }
+        [JsonPropertyName("id")]
+        public string Id { get; set; }
+        public string RecipeId { get; set; }
+        public string UserId { get; set; }
         public string Type { get; } = "recipe";
 
         public string Title { get; set; }
